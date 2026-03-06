@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+          @keyframes slideRight {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          .animate-slide-right {
+            animation: slideRight 20s linear infinite;
+          }
+        
+
+:root {
+  --background: #FFF9DD;
+  --foreground: #385723;
+   --gr-900: #001910;
+  --gr-700: #385723;
+  --gr-500: #94AB71;
+  --gr-300: #C7D9B5;
+  --cream: #FFF9DD;
+  --white-only: #FFFAF5;
+  --green-light: #A4F825;
+  --bg-active:rgba(199, 217, 181, 0.3);
+  --font-mont: Monserrat;
+  --font-platypi: Platypi;
+
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-mont: var(--font-montserrat);
+  --font-platypi: var(--font-platypi);
+ --color-gr900: var(--gr-900);
+ --color-gr700: var(--gr-700);
+ --color-gr500: var(--gr-500);
+ --color-gr300: var(--gr-300);
+ --color-cream: var(--cream);
+ --color-green-light: var(--green-light);
+ --color-bg-active: var(--bg-active);
+ --color-white-only: var(--white-only);
+ 
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Montserrat, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
